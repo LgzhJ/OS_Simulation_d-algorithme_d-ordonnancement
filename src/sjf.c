@@ -11,10 +11,12 @@
  *
  * Fonction de comparaison utilisée pour sélectionner le processus
  * au cpu_burst minimal parmi les processus disponibles à l'instant t.
+ * En cas d'égalité de burst, départage par date d'arrivée,
+ * puis par pid si les deux critères sont identiques.
  *
  * @param a  Pointeur vers le premier processus
  * @param b  Pointeur vers le second processus
- * @return   Négatif si a est plus court que b, positif sinon, 0 si égalité
+ * @return   Négatif si a est prioraitaire sur b, positif sinon, 0 si égalité
  */
 static int compare_burst(const void *a, const void *b)
 {
