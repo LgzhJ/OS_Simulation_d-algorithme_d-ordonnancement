@@ -35,14 +35,4 @@ typedef struct {
     int response_time;   /**< Temps de réponse : start - arrival (ms) */
 } Process;
 
-typedef struct cellule {
-    Process process;
-    struct cellule *suivant;
-}*File;
-
-typedef struct {
-    File tete;
-    File queue;
-}FileTQ;
-
 #endif /* PROCESS_H */
