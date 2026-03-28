@@ -56,4 +56,31 @@ void file_defiler(FileTQ *f, Process *dest);
 /** @brief Affiche le contenu de la file sur la sortie standard. */
 void file_afficher(const FileTQ *f);
 
+/* -----------------------------------------------------------------------
+ * Structures de données
+ * ----------------------------------------------------------------------- */
+
+/**
+ * @brief Maillon d'une file chaînée de processus.
+ *
+ * Chaque cellule contient un processus et un pointeur vers la cellule
+ * suivante. Ce type est un pointeur : @c NULL représente la fin de chaîne.
+ */
+typedef struct cellule {
+    Process process;         /**< Processus stocké dans ce maillon */
+    struct cellule *suivant; /**< Pointeur vers le maillon suivant (NULL si fin) */
+} *File;
+
+/**
+ * @brief File d'attente de processus avec accès direct en tête et en queue.
+ *
+ * Maintenir un pointeur sur la queue permet d'enfiler en O(1) sans
+ * parcourir toute la liste. Les deux champs valent @c NULL quand la
+ * file est vide.
+ */
+typedef struct {
+    File tete;  /**< Pointeur vers le premier élément (prochain à défiler) */
+    File queue; /**< Pointeur vers le dernier élément (dernier enfilé) */
+} FileTQ;
+
 #endif /* FILE_H */
