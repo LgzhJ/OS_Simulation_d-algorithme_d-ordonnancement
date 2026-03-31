@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
         /* Sauvegarde CSV */
         save_csv(processes, n, "SJF", "resultats_sjf.csv");
     }
-    else if (strcmp(algo, "RR") == 0) {
+    else if (strcmp(mode_algo, "RR") == 0) {
         /* Le quantum est obligatoire pour RR */
         if (argc < 4) {
             fprintf(stderr, "Erreur : RR nécessite un quantum (ex: ./scheduler procs.txt RR 4)\n");
