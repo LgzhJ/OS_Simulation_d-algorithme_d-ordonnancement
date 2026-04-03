@@ -90,4 +90,4 @@ Les valeurs après `arrival_time` alternent cycles CPU et cycles E/S. La premiè
 ## Structure du projet
 
 ## Auteurs
-NOM1 (xx%) · NOM2 (xx%) · NOM3 (xx%)
+JIANG Longzhou · BISIAUX Valentin · COSTA Mathéo
