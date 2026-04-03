@@ -64,7 +64,7 @@ Les valeurs après `arrival_time` alternent cycles CPU et cycles E/S. La premiè
 2      1    4     0
 3      2    9     3
 
-# Multi-burst : cpu0  io0  cpu1  io1  cpu2
+# Multi-burst : PID  arr  cpu0  io0  cpu1  io1  cpu2
 6      0    6     3    4    2    2
 ```
 
