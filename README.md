@@ -25,7 +25,7 @@ make
 ```bash
 make run
 ```
-3. Supprimer les .o, le binaire et les CSV :
+3. Supprimer les .o, le binaire et les CSV (tous les fichiers générés suite à la compilation):
 ```bash
 make clean
 ```
@@ -34,14 +34,14 @@ make clean
 make doc
 ```
 
+Lancer le simulateur sur un algo précis : `./scheduler <fichier_processus.txt> <ALGO> <quantum>` 
+Les résultats sont exportés dans un fichier CSV et afficher dans le terminal
+
 | Paramètre | Description |
 |-----------|-------------|
-| `fichier.txt` | Fichier de processus (voir format ci-dessous) |
+| `fichier_processus.txt` | Fichier de processus (voir format ci-dessous) |
 | `ALGO` | `FIFO`, `SJF`, `RR` ou `SRJF` |
 | `quantum` | Durée du quantum en ms — obligatoire pour `RR` |
-
-Lancer le simulateur sur un algo précis : `./scheduler <fichier_processus.txt> <ALGO_D'ORDONNANCEMENT ex: FIFO, SJF, SRJF ou RR> <quantum pour RR>` 
-Les résultats sont exportés dans un fichier CSV et afficher dans le terminal
 
 **Exemples :**
 ```bash
