@@ -17,10 +17,22 @@ Simulateur en C d'algorithmes d’ordonnancement de processus. Produit des métr
 - Gestion des E/S non parallélisables
 
 ## Compilation
-1. Compiler le projet : ```bash make```
-2. Compile et lance les 4 algos sur le fichier sur le fichier de test : ```bash make run```
-3. Supprimer les .o, le binaire et les CSV : ```bash make clean```
-4. Générer la documentation Doxygen : ```bash make doc```
+1. Compiler le projet :
+```bash
+make
+```
+2. Compile et lance les 4 algos sur le fichier sur le fichier de test :
+```bash
+make run
+```
+3. Supprimer les .o, le binaire et les CSV :
+```bash
+make clean
+```
+4. Générer la documentation Doxygen :
+```bash
+make doc
+```
 
 | Paramètre | Description |
 |-----------|-------------|
